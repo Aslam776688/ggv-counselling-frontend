@@ -53,8 +53,8 @@ const Registration = () => {
   return (
     <>
       {/* ----------- Start: Heading Text ----------- */}
-      <div className="text-xl md:text-2xl mb-2 py-10 text-center bg-teal-700 text-white pt-28">
-        <span className="font-extrabold"> 2025</span>
+      <div className="text-xl md:text-2xl mb-2 py-10 text-center bg-teal-600 text-white pt-28">
+        Counseling Registration <span className="font-extrabold"> 2025-26</span>
       </div>
       {/* ----------- End: Heading Text ----------- */}
 
@@ -359,6 +359,141 @@ const Registration = () => {
                 required
               />
             </div>
+
+
+            {/* ----------- Country selection field ----------- */}
+
+            <div className="max-full mb-6" aria-label="Select your Country">
+              <label
+                htmlFor="selectCountry"
+                className="block text-base font-normal mb-2"
+              >
+                Country <span className="text-red-500 ml-1">*</span>
+              </label>
+              <select
+                id="selectCountry"
+                name="selectCountry"
+                className="py-3 px-4 w-full border-1 border-gray-300 rounded-lg focus:border-1 text-stone-700 focus:outline-blue-400 cursor-pointer"
+                onChange={handleInputChange}
+              >
+                <option value="" selected>
+                  Select Country
+                </option>
+                <option value="india">India</option>
+                <option value="nepal">Nepal</option>
+                <option value="bhutan">Bhutan</option>
+                <option value="afghanistan">Afghanistan</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            {/* -----------Other  Country  field ----------- */}
+            <div className="max-full mb-6">
+              <label
+                htmlFor="otherCountry"
+                className="block text-base font-normal mb-2"
+              >
+                Other Country <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="otherCountry"
+                name="otherCountry"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Select your Country"
+                value={student.otherCountry}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            {/* State field  */}
+            <div className="max-full mb-6">
+              <label
+                htmlFor="state"
+                className="block text-base font-normal mb-2"
+              >
+                State/U.T <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="state"
+                name="state"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your State/U.T"
+                value={student.state}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* District field  */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="district"
+                className="block text-base font-normal mb-2"
+              >
+                District <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="district"
+                name="district"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your District"
+                value={student.district}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* City field */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="city"
+                className="block text-base font-normal mb-2"
+              >
+                City <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your City"
+                value={student.city}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+
+
+            {/* Present Pin Code field */}
+
+            
+            <div className="max-full mb-6">
+              <label
+                htmlFor="pinCode"
+                className="block text-base font-normal mb-2"
+              >
+                Pin Code <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="pinCode"
+                name="pinCode"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
+                placeholder="Enter Pin Code"
+                value={student.pinCode}
+                onChange={handleInputChange}
+                required
+                maxlength = "6"
+                inputMode="numeric"
+              />
+            </div>
+
 
             {/* ----------- Submit button  ----------- */}
 
