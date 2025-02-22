@@ -42,6 +42,7 @@ const Registration = () => {
     ugMarks: "",
     ugMarksDoc: "",
     photoDoc: "",
+    signDoc: "",
 
 
   });
