@@ -16,6 +16,34 @@ const Registration = () => {
     bloodGroup: "",
     category: "",
     categoryDoc: "",
+    pSelectCountry: "",
+    pOtherCountry: "",
+    pPinCode: "",
+    pState: "",
+    pDistrict: "",
+    pCity: "",
+    pAddress: "",
+    confPermanentAdd: "",
+    cSelectCountry: "",
+    cOtherCountry: "",
+    cPinCode: "",
+    cState: "",
+    cDistrict: "",
+    cCity: "",
+    cAddress: "",
+    applyForStream: "",
+    courses: "",
+    cuetMarks: "",
+    scoreCardDoc: "",
+    matricMarks: "",
+    matricMarksDoc: "",
+    interMarks: "",
+    interMarksDoc: "",
+    ugMarks: "",
+    ugMarksDoc: "",
+    photoDoc: "",
+
+
   });
 
   useEffect(() => {
@@ -361,18 +389,23 @@ const Registration = () => {
             </div>
 
 
-            {/* ----------- Country selection field ----------- */}
+            {/* ----------- permanent address -----------*/}
+
+            <h2 className="my-4 font-medium text-xl">Parmanent Address</h2>
+            <hr className="mb-5 text-stone-300" />
+
+            {/* ----------- Permanent Country selection field ----------- */}
 
             <div className="max-full mb-6" aria-label="Select your Country">
               <label
-                htmlFor="selectCountry"
+                htmlFor="pSelectCountry"
                 className="block text-base font-normal mb-2"
               >
                 Country <span className="text-red-500 ml-1">*</span>
               </label>
               <select
-                id="selectCountry"
-                name="selectCountry"
+                id="pSelectCountry"
+                name="pSelectCountry"
                 className="py-3 px-4 w-full border-1 border-gray-300 rounded-lg focus:border-1 text-stone-700 focus:outline-blue-400 cursor-pointer"
                 onChange={handleInputChange}
               >
@@ -387,113 +420,625 @@ const Registration = () => {
               </select>
             </div>
 
-            {/* -----------Other  Country  field ----------- */}
+            {/* ----------- Permanent Other  Country  field ----------- */}
+
             <div className="max-full mb-6">
               <label
-                htmlFor="otherCountry"
+                htmlFor="pOtherCountry"
                 className="block text-base font-normal mb-2"
               >
                 Other Country <span className="text-red-500 ml-1">*</span>
               </label>
               <input
                 type="text"
-                id="otherCountry"
-                name="otherCountry"
+                id="pOtherCountry"
+                name="pOtherCountry"
                 className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
-                placeholder="Select your Country"
-                value={student.otherCountry}
+                placeholder="Enter your Country"
+                value={student.pOtherCountry}
                 onChange={handleInputChange}
                 required
               />
             </div>
-            {/* State field  */}
+
+
+            {/* ----------- Permanent Present Pin Code field ----------- */}
+
+
             <div className="max-full mb-6">
               <label
-                htmlFor="state"
+                htmlFor="pPinCode"
+                className="block text-base font-normal mb-2"
+              >
+                Pin Code <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="number"
+                id="pPinCode"
+                name="pPinCode"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
+                placeholder="Enter Pin Code"
+                value={student.pPinCode}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+
+            {/* ----------- Permanent State field ----------- */}
+            <div className="max-full mb-6">
+              <label
+                htmlFor="pState"
                 className="block text-base font-normal mb-2"
               >
                 State/U.T <span className="text-red-500 ml-1">*</span>
               </label>
               <input
                 type="text"
-                id="state"
-                name="state"
+                id="pState"
+                name="pState"
                 className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
                 placeholder="Enter your State/U.T"
-                value={student.state}
+                value={student.pState}
                 onChange={handleInputChange}
                 required
               />
             </div>
 
-            {/* District field  */}
+            {/* ----------- Permanent District field -----------  */}
 
             <div className="max-full mb-6">
               <label
-                htmlFor="district"
+                htmlFor="pDistrict"
                 className="block text-base font-normal mb-2"
               >
                 District <span className="text-red-500 ml-1">*</span>
               </label>
               <input
                 type="text"
-                id="district"
-                name="district"
+                id="pDistrict"
+                name="pDistrict"
                 className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
                 placeholder="Enter your District"
-                value={student.district}
+                value={student.pDistrict}
                 onChange={handleInputChange}
                 required
               />
             </div>
 
-            {/* City field */}
+            {/* ----------- Permanent City field ----------- */}
 
             <div className="max-full mb-6">
               <label
-                htmlFor="city"
+                htmlFor="pCity"
                 className="block text-base font-normal mb-2"
               >
                 City <span className="text-red-500 ml-1">*</span>
               </label>
               <input
                 type="text"
-                id="city"
-                name="city"
+                id="pCity"
+                name="pCity"
                 className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
                 placeholder="Enter your City"
-                value={student.city}
+                value={student.pCity}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* ----------- Permanent Address field ----------- */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="pAddress"
+                className="block text-base font-normal mb-2"
+              >
+                Address <span className="text-red-500 ml-1">*</span>
+              </label>
+              <textarea
+                id="pAddress"
+                name="pAddress"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your address"
+                value={student.pAddress}
                 onChange={handleInputChange}
                 required
               />
             </div>
 
 
+            {/* ----------- same as permanent address ----------- */}
 
-            {/* Present Pin Code field */}
+            <div className="mb-6 flex flex-row items-center my-8">
+              <input
+                type="checkbox"
+                id="confPermanentAdd"
+                name="confPermanentAdd"
+                className="p-11 block"
+                value={student.confPermanentAdd}
+              />
+              <label
+                htmlFor="confPermanentAdd"
+                className="block text-base font-normal ml-3"
+              >
+                Same as Permanent Address
+              </label>
+            </div>
 
-            
+            {/* ----------- Correspondence Address -----------*/}
+
+            <h2 className="my-4 font-medium text-xl">Correspondence Address</h2>
+            <hr className="mb-5 text-stone-300" />
+
+            {/* ----------- Correspondence Country selection field ----------- */}
+
+            <div className="max-full mb-6" aria-label="Select your Country">
+              <label
+                htmlFor="cSelectCountry"
+                className="block text-base font-normal mb-2"
+              >
+                Country <span className="text-red-500 ml-1">*</span>
+              </label>
+              <select
+                id="cSelectCountry"
+                name="cSelectCountry"
+                className="py-3 px-4 w-full border-1 border-gray-300 rounded-lg focus:border-1 text-stone-700 focus:outline-blue-400 cursor-pointer"
+                onChange={handleInputChange}
+              >
+                <option value="" selected>
+                  Select Country
+                </option>
+                <option value="india">India</option>
+                <option value="nepal">Nepal</option>
+                <option value="bhutan">Bhutan</option>
+                <option value="afghanistan">Afghanistan</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            {/* ----------- Correspondence Other  Country  field ----------- */}
             <div className="max-full mb-6">
               <label
-                htmlFor="pinCode"
+                htmlFor="cOtherCountry"
+                className="block text-base font-normal mb-2"
+              >
+                Other Country <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="cOtherCountry"
+                name="cOtherCountry"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your Country"
+                value={student.cOtherCountry}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+
+            {/* ----------- Correspondence Present Pin Code field ----------- */}
+
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="cPinCode"
                 className="block text-base font-normal mb-2"
               >
                 Pin Code <span className="text-red-500 ml-1">*</span>
               </label>
               <input
-                type="text"
-                id="pinCode"
-                name="pinCode"
+                type="number"
+                id="cPinCode"
+                name="cPinCode"
                 className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
                 placeholder="Enter Pin Code"
-                value={student.pinCode}
+                value={student.cPinCode}
                 onChange={handleInputChange}
                 required
-                maxlength = "6"
-                inputMode="numeric"
               />
             </div>
 
+
+            {/* ----------- Correspondence State field ----------- */}
+            <div className="max-full mb-6">
+              <label
+                htmlFor="cState"
+                className="block text-base font-normal mb-2"
+              >
+                State/U.T <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="cState"
+                name="cState"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your State/U.T"
+                value={student.cState}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* ----------- Correspondence District field -----------  */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="cDistrict"
+                className="block text-base font-normal mb-2"
+              >
+                District <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="cDistrict"
+                name="cDistrict"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your District"
+                value={student.cDistrict}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* ----------- Correspondence City field ----------- */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="cCity"
+                className="block text-base font-normal mb-2"
+              >
+                City <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                id="cCity"
+                name="cCity"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your City"
+                value={student.cCity}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* ----------- Correspondence Address field ----------- */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="cAddress"
+                className="block text-base font-normal mb-2"
+              >
+                Address <span className="text-red-500 ml-1">*</span>
+              </label>
+              <textarea
+                id="cAddress"
+                name="cAddress"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400"
+                placeholder="Enter your address"
+                value={student.cAddress}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            {/* ----------- Apply for Stream ----------- */}
+
+            <div className="max-full mb-6" aria-label="Select your Country">
+              <label
+                htmlFor="applyForStream"
+                className="block text-base font-normal mb-2"
+              >
+                Apply for Stream <span className="text-red-500 ml-1">*</span>
+              </label>
+              <select
+                id="applyForStream"
+                name="applyForStream"
+                className="py-3 px-4 w-full border-1 border-gray-300 rounded-lg focus:border-1 text-stone-700 focus:outline-blue-400 cursor-pointer"
+                onChange={handleInputChange}
+              >
+                <option value="ug">UG</option>
+                <option value="pg">PG</option>
+              </select>
+            </div>
+
+            {/* ----------- Courses field ----------- */}
+            <div className="mb-8">
+              <label
+                htmlFor="courses"
+                className="block text-base font-normal mb-2"
+              >
+                Course <span className="text-red-500 ml-1">*</span>
+              </label>
+              <div className="flex flex-row items-center gap-5">
+                <div className="flex flex-row items-center ">
+                  <input
+                    type="checkbox"
+                    id="confPermanentAdd"
+                    name="confPermanentAdd"
+                    className="p-11 block"
+                  />
+                  <label
+                    htmlFor="confPermanentAdd"
+                    className="block text-base font-normal ml-3"
+                  >
+                    BCA
+                  </label>
+                </div>
+                <div className="flex flex-row items-center ">
+                  <input
+                    type="checkbox"
+                    id="confPermanentAdd"
+                    name="confPermanentAdd"
+                    className="p-11 block"
+                  />
+                  <label
+                    htmlFor="confPermanentAdd"
+                    className="block text-base font-normal ml-3"
+                  >
+                    BSC-CS
+                  </label>
+                </div>
+                <div className="flex flex-row items-center ">
+                  <input
+                    type="checkbox"
+                    id="confPermanentAdd"
+                    name="confPermanentAdd"
+                    className="p-11 block"
+                  />
+                  <label
+                    htmlFor="confPermanentAdd"
+                    className="block text-base font-normal ml-3"
+                  >
+                    MCA
+                  </label>
+                </div>
+                <div className="flex flex-row items-center ">
+                  <input
+                    type="checkbox"
+                    id="confPermanentAdd"
+                    name="confPermanentAdd"
+                    className="p-11 block"
+                  />
+                  <label
+                    htmlFor="confPermanentAdd"
+                    className="block text-base font-normal ml-3"
+                  >
+                    MSC-CS
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+            {/* Cuet Marks field */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="cuetMarks"
+                className="block text-base font-normal mb-2"
+              >
+                CUET Marks <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="number"
+                id="cuetMarks"
+                name="cuetMarks"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
+                placeholder="Enter your Cuet Marks"
+                value={student.cuetMarks}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            {/* CUET Score Card Document */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="scoreCardDoc"
+                className="block text-base font-normal mb-2"
+              >
+                <span id="categoryLabel"></span> CUET Score Card
+                <span className="text-sm text-stone-500">
+                  (only jpg, jpeg, pdf)
+                </span>
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="file"
+                id="scoreCardDoc"
+                name="scoreCardDoc"
+                className="py-2 px-4 w-full md:size-[60%] border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 cursor-pointer file:me-4 file:py-[6px] file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-blue-500 file:text-white hover:file:bg-blue-500 file:disabled:opacity-50 file:cursor-pointer"
+                accept=".jpg, .jpeg, .pdf"
+                required
+              />
+            </div>
+
+            {/* Matriculation/10th Marks field */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="matricMarks"
+                className="block text-base font-normal mb-2"
+              >
+                Matriculation/10th Marks<span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="number"
+                id="matricMarks"
+                name="matricMarks"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
+                placeholder="Enter your Matriculation Marks"
+                value={student.matricMarks}
+                onChange={handleInputChange}
+                required
+                min={1000000000}
+                max={9999999999}
+              />
+            </div>
+
+            {/* Matriculation Marksheet Upload */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="matricMarksDoc"
+                className="block text-base font-normal mb-2"
+              >
+                <span id="categoryLabel"></span> Matric/10th Marksheet
+                <span className="text-sm text-stone-500">
+                  (only jpg, jpeg, pdf)
+                </span>
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="file"
+                id="matricMarksDoc"
+                name="matricMarksDoc"
+                className="py-2 px-4 w-full md:size-[60%] border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 cursor-pointer file:me-4 file:py-[6px] file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-blue-500 file:text-white hover:file:bg-blue-500 file:disabled:opacity-50 file:cursor-pointer"
+                accept=".jpg, .jpeg, .pdf"
+                required
+              />
+            </div>
+
+
+            {/* Intermediate/12th Marks field */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="interMarks"
+                className="block text-base font-normal mb-2"
+              >
+                Inter/12th Marks<span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="number"
+                id="interMarks"
+                name="interMarks"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
+                placeholder="Enter your Matriculation Marks"
+                value={student.interMarks}
+                onChange={handleInputChange}
+                required
+                min={1000000000}
+                max={9999999999}
+              />
+            </div>
+
+            {/* Intermediate Marksheet Upload */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="interMarksDoc"
+                className="block text-base font-normal mb-2"
+              >
+                <span id="categoryLabel"></span> Inter/12th Marksheet
+                <span className="text-sm text-stone-500">
+                  (only jpg, jpeg, pdf)
+                </span>
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="file"
+                id="interMarksDoc"
+                name="interMarksDoc"
+                className="py-2 px-4 w-full md:size-[60%] border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 cursor-pointer file:me-4 file:py-[6px] file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-blue-500 file:text-white hover:file:bg-blue-500 file:disabled:opacity-50 file:cursor-pointer"
+                accept=".jpg, .jpeg, .pdf"
+                required
+              />
+            </div>
+
+
+            {/* UG Marks field */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="ugMarks"
+                className="block text-base font-normal mb-2"
+              >
+                UG Marks<span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="number"
+                id="ugMarks"
+                name="ugMarks"
+                className="py-3 px-4 block w-full border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none "
+                placeholder="Enter UG marks"
+                value={student.ugMarks}
+                onChange={handleInputChange}
+                required
+                min={1000000000}
+                max={9999999999}
+              />
+            </div>
+
+            {/* UG Marksheet section */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="ugMarksDoc"
+                className="block text-base font-normal mb-2"
+              >
+                <span id="categoryLabel"></span> UG Marksheet
+                <span className="text-sm text-stone-500">
+                  (only jpg, jpeg, pdf)
+                </span>
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="file"
+                id="ugMarksDoc"
+                name="ugMarksDoc"
+                className="py-2 px-4 w-full md:size-[60%] border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 cursor-pointer file:me-4 file:py-[6px] file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-blue-500 file:text-white hover:file:bg-blue-500 file:disabled:opacity-50 file:cursor-pointer"
+                accept=".jpg, .jpeg, .pdf"
+                required
+              />
+            </div>
+
+            {/* Candidate photograph upload */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="photoDoc"
+                className="block text-base font-normal mb-2"
+              >
+                <span id="categoryLabel"></span> Photo
+                <span className="text-sm text-stone-500">
+                  (only jpg, jpeg, pdf)
+                </span>
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="file"
+                id="photoDoc"
+                name="photoDoc"
+                className="py-2 px-4 w-full md:size-[60%] border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 cursor-pointer file:me-4 file:py-[6px] file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-blue-500 file:text-white hover:file:bg-blue-500 file:disabled:opacity-50 file:cursor-pointer"
+                accept=".jpg, .jpeg, .pdf"
+                required
+              />
+            </div>
+            {/* Candidate Signature upload */}
+
+            <div className="max-full mb-6">
+              <label
+                htmlFor="signDoc"
+                className="block text-base font-normal mb-2"
+              >
+                <span id="categoryLabel"></span> Signature
+                <span className="text-sm text-stone-500">
+                  (only jpg, jpeg, pdf)
+                </span>
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="file"
+                id="signDoc"
+                name="signDoc"
+                className="py-2 px-4 w-full md:size-[60%] border-1 border-gray-300 rounded-lg text-base text-stone-700 placeholder-neutral-400 focus:border-1 focus:outline-blue-400 cursor-pointer file:me-4 file:py-[6px] file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-blue-500 file:text-white hover:file:bg-blue-500 file:disabled:opacity-50 file:cursor-pointer"
+                accept=".jpg, .jpeg, .pdf"
+                required
+              />
+            </div>
 
             {/* ----------- Submit button  ----------- */}
 
